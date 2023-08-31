@@ -14,12 +14,13 @@
 
             <div class="m-2 p-2 bg-slate-100 rounded">
                 <div class="space-y-8 divide-y divide-gray-200 w-1/2 mt-10">
-                    <form method="POST" action="{{ route('admin.tables.store') }}">
+                    <form method="POST" action="{{ route('admin.tables.update', $table->id) }}">
                         @csrf
+                        @method('PUT')
                         <div class="sm:col-span-6">
                             <label for="name" class="block text-sm font-medium text-gray-700"> Name </label>
                             <div class="mt-1">
-                                <input type="text" id="name" name="name"
+                                <input type="text" id="name" name="name" value="{{ $table->name }}"
                                     class="block w-full appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('name') border-red-400 @enderror" />
                             </div>
                             @error('name')
@@ -30,7 +31,7 @@
                             <label for="guest_number" class="block text-sm font-medium text-gray-700"> Guest Number
                             </label>
                             <div class="mt-1">
-                                <input type="text" id="guest_number" name="guest_number"
+                                <input type="text" id="guest_number" name="guest_number" value="{{ $table->guest_number }}"
                                     class="block w-full appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5 @error('guest_number') border-red-400 @enderror" />
                             </div>
                             @error('guest_number')
@@ -40,9 +41,9 @@
                         <div class="sm:col-span-6 pt-5">
                             <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
                             <div class="mt-1">
-                                <select name="status[]" id="status" class="w-full form-multiselect block mt-1">
+                                <select name="status" id="status" class="w-full form-multiselect block mt-1">
                                     @foreach (App\Enums\TableStatus::cases() as $status)
-                                        <option value="{{ $status->value }}">{{ $status->name }}</option>
+                                        <option value="{{ $status->value }}" @selected($table->status->value == $status->value)>{{ $status->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -53,9 +54,9 @@
                         <div class="sm:col-span-6 pt-5">
                             <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
                             <div class="mt-1">
-                                <select name="location[]" id="location" class="w-full form-multiselect block mt-1">
+                                <select name="location" id="location" class="w-full form-multiselect block mt-1">
                                     @foreach (App\Enums\TableLocation::cases() as $location)
-                                        <option value="{{ $location->value }}">{{ $location->name }}</option>
+                                        <option value="{{ $location->value }}" @selected($table->location->value == $location->value)>{{ $location->name }}</option>
                                     @endforeach
                                 </select>
                             </div>

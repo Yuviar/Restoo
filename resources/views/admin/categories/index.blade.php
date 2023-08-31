@@ -16,16 +16,16 @@
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-center">
                                     Name
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-center">
                                     Image
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-center">
                                     Description
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-center">
                                     <span class="sr-only">Edit</span>
                                 </th>
                             </tr>
@@ -33,13 +33,13 @@
                         <tbody>
                             @foreach ($categories as $category)
                                 <tr
-                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-center">
                                     <th scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white ">
                                         {{ $category->name }}
                                     </th>
                                     <td scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex justify-center">
                                         <img src="{{ Storage::url($category->image) }}" alt=""
                                             class="w-24 h-24 rounded">
                                     </td>
@@ -49,7 +49,7 @@
                                     </td>
                                     <td scope="row"
                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <div class="flex space-x-2">
+                                        <div class="flex space-x-2 justify-center">
                                             <a href="{{ route('admin.categories.edit', $category->id) }}"
                                                 class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-lg text-white">Edit</a>
                                             <form action="{{ route('admin.categories.destroy', $category->id) }}"
