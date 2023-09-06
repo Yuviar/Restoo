@@ -31,9 +31,7 @@
                                 <th scope="col" class="px-6 py-3">
                                     Guest
                                 </th>
-                                <th scope="col" class="px-6 py-3">
-                                    <span class="sr-only">Edit</span>
-                                </th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -55,10 +53,7 @@
                                 <td class="px-6 py-4">
                                     {{ $reservation->guest_number }}
                                 </td>
-                                <td class="px-6 py-4 text-right">
-                                    <a href="#"
-                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                </td>
+                                
                             </tr>
                             @endforeach
                         </tbody>
