@@ -43,6 +43,9 @@
         .account-link:hover {
             background: #3d68ff;
         }
+        .hight{
+            height: 60vh;
+        }
     </style>
     <!-- Fonts -->
     {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
