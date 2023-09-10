@@ -30,7 +30,9 @@
                                 <th scope="col" class="px-6 py-3">
                                     Guest
                                 </th>
-                                
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    <span class="sr-only">Edit</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,7 +54,20 @@
                                 <td class="px-6 py-4">
                                     {{ $reservation->guest_number }}
                                 </td>
-                                
+                                <td class="px-6 ppy-4">
+                                    <div class="flex space-x-2 justify-center">
+                                        <a href="{{ route('admin.reservations.edit', $reservation->id) }}"
+                                            class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-lg text-white">Edit</a>
+                                        <form action="{{ route('admin.reservations.destroy', $reservation->id) }}"
+                                            method="POST"
+                                            class="px-4 py-2 bg-red-500 hover:bg-red-700 rounded-lg text-white"
+                                            onsu bmit="return confirm('Are you sure?');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </div>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
