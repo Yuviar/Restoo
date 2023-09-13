@@ -14,7 +14,7 @@
             <div class="w-full max-w-lg hight p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 flex justify-center">
                 <form method="POST" action="{{ route('admin.categories.store') }}" enctype="multipart/form-data" class="w-full mt-5">
                     @csrf
-                    <div class="sm:col-span-6 pt-3">
+                    <div class="sm:col-span-6">
                         <label for="name" class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"> Name </label>
                         <input type="text" id="name" name="name" autocomplete="off" class="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow @error('name') border-red-400 @enderror"  />
                         @error('name')

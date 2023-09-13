@@ -11,7 +11,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $special = Category::where('name', 'special')->first();
-        
+        // dd($special);
         return view('welcome', compact('special'));
     }
 }
