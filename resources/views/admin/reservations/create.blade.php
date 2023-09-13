@@ -67,7 +67,7 @@
                             @enderror
                         </div>
                         <div class="sm:col-span-6">
-                            <label for="guest_number" class="block text-sm font-medium text-gray-700"> Guest Number
+                            <label for="guest_number" class="block text-sm font-medium text-gray-700"> Number of Guests
                             </label>
                             <div class="mt-1">
                                 <input type="text" id="guest_number" name="guest_number"
