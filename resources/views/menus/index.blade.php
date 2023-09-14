@@ -11,7 +11,7 @@
                 <p class="leading-normal text-gray-700">{{ $menu->description }}</p>
             </div>
             <div class="flex items-center justify-end p-4">
-                <span class="text-xl text-green-600">{{ $menu->price }}k</span>
+                <span class="text-xl text-green-600">Rp {{ $menu->price }}k</span>
             </div>
         </div>
     @endforeach

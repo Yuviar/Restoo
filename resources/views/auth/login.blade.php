@@ -1,9 +1,9 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
+            {{-- <a href="/">
                 <i class="fas fa-hotdog text-indigo-600" style="font-size: 5em; "></i>
-            </a>
+            </a> --}}
         </x-slot>
 
         <!-- Session Status -->

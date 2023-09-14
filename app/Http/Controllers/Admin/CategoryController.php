@@ -17,7 +17,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        //mengambil semua data yang berada di tabel categori
         $categories = Category::all();
+        //dan menampilkannya di categori index dengan membawa variabel categories
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -39,14 +41,17 @@ class CategoryController extends Controller
      */
     public function store(CategoryStoreRequest $request)
     {
+        //memindahkan file image ke public/categories
         $image = $request->file('image')->store('public/categories');
 
+        //menambah data ke tabel categori
         Category::create([
             'name' => $request->name,
             'description' => $request->description,
             'image' => $image
         ]);
 
+        //dan menampilkan view categori index dengan mambawa pesan sukses
         return to_route('admin.categories.index')->with('success', 'Category created successfully');
     }
 

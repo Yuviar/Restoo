@@ -121,8 +121,8 @@
         </div>
         <div class="container w-full px-5 py-6 mx-auto">
             @if ($special)
-                @foreach ($special->menus as $menu)
-                    <div class="grid lg:grid-cols-4 gap-y-6">
+                <div class="grid lg:grid-cols-4 gap-y-6">
+                    @foreach ($special->menus as $menu)
                         <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
                             <img class="w-full h-48" src="{{ Storage::url($menu->image) }}" alt="Image" />
                             <div class="px-6 py-4">
@@ -134,8 +134,8 @@
                                 <span class="text-xl text-green-600">Rp {{ $menu->price }}</span>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             @else
                 <p class="text-center text-lg capitalize">no special menu for now</p>
             @endif

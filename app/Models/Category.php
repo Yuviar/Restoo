@@ -9,8 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
+    // hanya name, image, dan description yang bokeh diisi
     protected $fillable = ['name', 'image', 'description'];
 
+    //categori memiliki banyak menu
     public function menus()
     {
         return $this->belongsToMany(Menu::class, 'category_menu');
