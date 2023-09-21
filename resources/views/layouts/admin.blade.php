@@ -66,10 +66,10 @@
                     class="fas fa-hotdog"></i></a>
         </div>
         <nav class="text-white text-base font-semibold pt-3">
-            <a href="index.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            {{-- <a href="{{ route('admin.index') }}" class="flex items-center text-white opacity-75 {{ request()->routeIs('admin.index') ? 'active-nav-link' : '' }} hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
-                Dashboard
-            </a>
+                {{ __('Dashboard') }}
+            </a> --}}
             <a href="{{ route('admin.categories.index') }}"
                 class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ request()->routeIs('admin.categories.index') ? 'active-nav-link' : '' }}">
                 <i class="fas fa-clipboard-list mr-3"></i>
@@ -82,12 +82,12 @@
             </a>
             <a href="{{ route('admin.tables.index') }}"
                 class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ request()->routeIs('admin.tables.index') ? 'active-nav-link' : '' }}">
-                <i class="fas fa-sticky-note mr-3"></i>
+                <i class="fas fa-hard-hat mr-3"></i>
                 {{ __('Tables') }}
             </a>
             <a href="{{ route('admin.reservations.index') }}"
                 class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item {{ request()->routeIs('admin.reservations.index') ? 'active-nav-link' : '' }}">
-                <i class="fas fa-hard-hat mr-3"></i>
+                <i class="fas fa-sticky-note mr-3"></i>
                 {{ __('Reservations') }}
             </a>
 

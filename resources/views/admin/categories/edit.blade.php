@@ -57,7 +57,10 @@
                     </div>
                 </form>
             </div>
-            <img src="{{ Storage::url($category->image) }}" id="preview" alt="" class=" w-64 h-64 rounded-xl mx-auto">
+            <div class="w-72 h-72 rounded-xl mx-auto bg-white flex justify-center items-center shadow-xl">
+
+                <img src="{{ Storage::url($category->image) }}" id="preview" alt="" class=" rounded-xl ">
+            </div>
         </div>
     </div>
     {{-- @push('script')

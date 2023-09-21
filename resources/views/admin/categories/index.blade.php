@@ -6,7 +6,7 @@
     </x-slot>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-end mb-4 pr-4">
-            <a href="{{ route('admin.categories.create') }}" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white">New Category</a>
+            <a href="{{ route('admin.categories.create') }}" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white shadow-lg ">New Category</a>
         </div>
         <div class="flex flex-col">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
